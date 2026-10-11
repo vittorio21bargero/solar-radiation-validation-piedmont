@@ -74,39 +74,20 @@ complex to maintain, in favour of reanalysis data.
 ## Repository structure
 
 ```
-notebooks/        main analysis
-│   UTC_converter, hourly_to_daily, aggregate_9_15_to_daily,
-│   merge_stations_era5, stations_ghi_era5                   data preparation
-│   clearsky_pvlib_hourly                                    clear-sky radiation with pvlib
-│   clearsky_day_selection                                   selection of clear-sky days
-│   fit_*, r2_hourly_station_vs_clearsky_by_year             linear fits station / ERA5 / clear-sky
-│   station_vs_era5_difference, percentage_difference_*      station - ERA5 differences
-│   spread_stations*, station_error_spread_clearsky          spread across stations
-│   station_degradation                                      bias of each station over time
+notebooks/        analysis: data preparation, clear-sky selection, fits, differences, spread
 data/hourly/      conversion of hourly data, extraterrestrial radiation
-archive/          early exploration: ARPA data, regional agrometeorological network
-                  (linear correlations per station, first pvlib comparisons)
-scripts/          readme_figures.py: figures of this README
-docs/figures/
+archive/          early exploration of the ARPA and RAM networks
+scripts/          figures of this README
 ```
 
-The notebooks are written in Italian and were run interactively; file paths refer to the local
-working copy and need to be adapted.
+Notebooks are research logs, with comments in Italian.
 
-## Data
+## Reproducibility
 
-The data are **not included**, for size (about 2 GB) and licensing reasons:
-
-- hourly GHI of the ARPA Piemonte pyranometer network;
-- ERA5-Land hourly reanalysis (ECMWF / Copernicus Climate Change Service).
-
-## Requirements
-
-Python 3 with Jupyter and
-
-```bash
-pip install pandas numpy scipy scikit-learn statsmodels matplotlib pvlib pytz jupyter
-```
+- **Requirements:** Python 3 with pandas, NumPy, SciPy, scikit-learn, statsmodels, Matplotlib, pvlib.
+- **Run:** the notebooks in `notebooks/`; file paths refer to the local working copy and need to be adapted.
+- **Data:** not included (about 2 GB, licensed). Hourly GHI of the ARPA Piemonte network and
+  ERA5-Land hourly reanalysis (ECMWF / Copernicus Climate Change Service).
 
 ## Author
 

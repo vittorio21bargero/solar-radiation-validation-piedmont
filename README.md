@@ -8,7 +8,10 @@ finding problematic stations and estimating the real accuracy of the instruments
 
 *Bachelor's thesis in Physics, University of Turin, carried out during an internship with
 ARPA Piemonte and Regione Piemonte (2023–2024). Supervisor: Claudio Cassardo;
-co-supervisor: Federico Spanna. The results are summarised in a short paper written for AMPRO.*
+co-supervisor: Federico Spanna.*
+
+**Published as:** V. Bargero, *Validazione del dato di radiazione solare in Piemonte*,
+[NEC – la rivista di AMPRO](https://www.meteoprofessionisti.it/nec-la-rivista-di-ampro/), no. 58, 2024 (in Italian).
 
 ![Mean bias of each station with respect to ERA5-Land](docs/figures/station_bias.png)
 

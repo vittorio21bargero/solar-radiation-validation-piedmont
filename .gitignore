@@ -4,6 +4,8 @@
 !*/
 !*.ipynb
 !README.md
+!scripts/*.py
+!docs/figures/*.png
 !.gitignore
 
 .ipynb_checkpoints/

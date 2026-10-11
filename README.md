@@ -63,15 +63,17 @@ stations are excluded from the statistics above.
 
 ```
 notebooks/        main analysis
-│   UTC_converter, hourly_to_daily, stazioni_ERA5_combined   data preparation
-│   PVLIB_orari_min_refresh                                  clear-sky radiation with pvlib
-│   selezionatore_clearsky                                   selection of clear-sky days
-│   fit_*, R_2_orario_clearsky_stazione_PV_anno              linear fits station / ERA5 / clear-sky
-│   pianura, scarto_percentuale_ERA_stazioni_*               station - ERA5 differences
-│   dev_std_stazioni*, errore_PV_dev_std_clearsky            spread across stations
-│   deterioramento_stazioni                                  bias of each station over time
+│   UTC_converter, hourly_to_daily, aggregate_9_15_to_daily,
+│   merge_stations_era5, stations_ghi_era5                   data preparation
+│   clearsky_pvlib_hourly                                    clear-sky radiation with pvlib
+│   clearsky_day_selection                                   selection of clear-sky days
+│   fit_*, r2_hourly_station_vs_clearsky_by_year             linear fits station / ERA5 / clear-sky
+│   station_vs_era5_difference, percentage_difference_*      station - ERA5 differences
+│   spread_stations*, station_error_spread_clearsky          spread across stations
+│   station_degradation                                      bias of each station over time
 data/hourly/      conversion of hourly data, extraterrestrial radiation
-archive/          early exploration: correlations per station, first pvlib comparisons
+archive/          early exploration: ARPA data, regional agrometeorological network
+                  (linear correlations per station, first pvlib comparisons)
 scripts/          readme_figures.py: figures of this README
 docs/figures/
 ```

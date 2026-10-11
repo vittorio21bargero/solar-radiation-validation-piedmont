@@ -3,7 +3,7 @@ Figures for the README (English labels), saved in docs/figures/.
 
 Inputs (not tracked by git), produced by the notebooks:
 - ERA_PV_stazioni_clearsky_daily.csv       daily GHI of stations and ERA5-Land on clear-sky days
-- ERA_PV_stazioni_clearsky_giornalieri.csv same, aggregated from the 9-15 hourly data (Untitled2.ipynb)
+- ERA_PV_stazioni_clearsky_giornalieri.csv same, aggregated from the 9-15 hourly data (aggregate_9_15_to_daily.ipynb)
 
 Usage:  python scripts/readme_figures.py [folder with the two CSV files]   (default: archive/ARPA)
 """
@@ -21,7 +21,7 @@ OUT.mkdir(parents=True, exist_ok=True)
 
 # stations whose measurements are affected by their siting (shading by trees, a tower, ...)
 ANOMALOUS = ["BORGOMANERO", "MOMBALDONE", "MOMBARCARO", "PINO_TORINESE", "PONZONE", "TORINO"]
-# stations used in pianura.ipynb for the mean station-ERA5 difference
+# stations used in station_vs_era5_difference.ipynb for the mean station-ERA5 difference
 SELECTED = ["ALBA", "CASALE_MONFERRATO", "ASTI", "ALESSANDRI", "AVIGLIANA", "BASALUZZO", "BORGOFRANCO_IVREA",
             "BRA", "CANDIA_CANAVESE", "CARMAGNOLA", "COSTIGLIOLE_SALUZZO", "CUMIANA", "CUNEO", "FOSSANO",
             "MONCALIERI", "NOVI_LIGURE", "SALICETO", "TREISO", "VERCELLI", "VEROLENGO", "VILLANOVA_SOLARO"]

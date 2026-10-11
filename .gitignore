@@ -1,0 +1,9 @@
+# Si versiona solo il codice (notebook) e la documentazione.
+# Dati (CSV, database), PDF, documenti e immagini restano solo in locale.
+*
+!*/
+!*.ipynb
+!README.md
+!.gitignore
+
+.ipynb_checkpoints/

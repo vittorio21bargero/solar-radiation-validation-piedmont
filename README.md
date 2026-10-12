@@ -32,10 +32,10 @@ cos θ + diffuse horizontal irradiance), measured by thermopile pyranometers (CA
    and compared by linear regression. The RAM stations gave slopes far from 1 (0.63 to 1.31) and were
    judged unreliable; the ARPA data were consistent and were analysed further.
 2. **Clear-sky days.** Clouds make a point measurement and an 11 km grid cell hard to compare, so
-   the comparison is restricted to clear-sky days. Each hour gets an effective cloudiness from ERA5,
-   a weighted mean of low, medium and high cloud cover (weights ≈ 0.7–0.75, 0.2–0.25 and 0.05), and a
-   day is kept only if *all* its hours are below 10%. The criterion is very selective: about 325 days
-   remain between 1996 and 2023.
+   the comparison is restricted to clear-sky days. Each hour gets an effective cloudiness from the
+   ERA5 low, medium and high cloud cover, 0.75·cc_low + 0.20·cc_mid + 0.05·cc_high, and a day is kept
+   only if *all* its hours are below 10%. The criterion is very selective: 324 days remain between
+   1996 and 2023.
 3. **Is ERA5 a good reference?** On clear-sky hours ERA5-Land is compared with the Ineichen–Perez
    clear-sky model computed with [pvlib](https://pvlib-python.readthedocs.io/) for the coordinates
    and altitude of each station: for the stations tested, hourly linear fits give R² ≥ 0.97 and
